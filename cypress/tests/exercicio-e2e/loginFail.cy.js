@@ -1,15 +1,15 @@
-import HomePage from '../support/pages/HomePage'
-import LoginPage from '../support/pages/LoginPage'
-import RegisterPage from '../support/pages/RegisterPage'
+import HomePage from '../../support/pages/HomePage'
+import LoginPage from '../../support/pages/LoginPage'
+import users from '../../fixtures/users.json'
 
-describe('Login e Registro de Usuário', () => {
-  let testData
+const homePage = new HomePage
+const loginPage = new LoginPage
 
-  before(() => {
-    cy.fixture('users').then((data) => {
-      testData = data
+describe('Teste de login invalido', () => {
+
+    it('Credenciais invalidas', () => {
+        loginPage.accessLoginPage()
+        loginPage.submitLoginForm(users.loginInfo[0].username, users.loginInfo[1].password)
+        cy.get('.MuiAlert-message').should('be.visible')
     })
-  })
-
-
 })
