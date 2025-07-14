@@ -2,14 +2,7 @@ import HomePage from '../support/pages/HomePage'
 import LoginPage from '../support/pages/LoginPage'
 import RegisterPage from '../support/pages/RegisterPage'
 
-describe('Login e Registro de Usuário', () => {
-  let testData
+const homePage = new HomePage
+const loginPage = new LoginPage
+const registerPage = new RegisterPage
 
-  before(() => {
-    cy.fixture('users').then((data) => {
-      testData = data
-    })
-  })
-
-
-})

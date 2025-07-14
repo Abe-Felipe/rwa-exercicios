@@ -1,4 +1,5 @@
-{ // Credenciais de usuários válidos para login
+{
+  // Credenciais de usuários válidos para login
   "validUser":  [
     { "username": "Heath93",
       "password": "s3cret",
@@ -20,6 +21,8 @@
       "fullName": "Reyes Osinski"
     }
   ],
+
+  // Credenciais de usuários inválidos para login
 
   "invalidUser":  [
     { "username": "Heath94",
