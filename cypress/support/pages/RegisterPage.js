@@ -1,4 +1,16 @@
 class RegisterPage {
-  // Elementos e métodos da página de registro
+
+    selectorsList() {
+        const selectors = {
+            signUpClick:    "[href='/signup']",
+        }
+        return selectors
+    }
+
+        accessRegisterPage() {
+            cy.visit('/signin')
+            cy.get(this.SelectorsList().signUpClick).click()
+        }
+
 }
 export default RegisterPage
