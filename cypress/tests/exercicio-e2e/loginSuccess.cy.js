@@ -10,6 +10,7 @@ describe('Teste de login valido', () => {
     it('Credenciais validas', () => {
         loginPage.accessLoginPage()
         loginPage.submitLoginForm(users.loginInfo[0].username, users.loginInfo[0].password)
-        cy.get('.NavBar-logo').should('be.visible')
+        cy.get('.NavBar-logo')
+            .should('be.visible')
     })
 })
